@@ -109,7 +109,7 @@ Create a new secret to be used by GitHub Actions. We need to have the following 
 The workflows can automatically export your app (as an unmanaged solution) from a development environment, generate a build artifact (managed solution), and deploy the app into your production environment.
 Create a workflow to export and unpack the solution file to a new branch
 1.	Select **Actions** and then **set up a workflow yourself**. This will start a new YML file with a basic workflow to help you get started with GitHub Actions.
-2.	Delete the pre-created content, paste the content from the export-and-branch-solution.yml file, and then rename the file to ‘export-and-branch-solution’.yml.
+2.	Delete the pre-created content, paste the content from the [export-and-branch-solution.yml](https://github.com/teamruegg/PowerPlatformALMGitHubActions/blob/main/workflows/export-and-branch-solution.yml) file, and then rename the file to ‘export-and-branch-solution’.yml.
 3.	Update under solution_name: > default: **[SOLUTION]** with the Name of your solution.
 4.	You are now ready to commit your changes. Select **Start commit**, type **export-and-branch-solution.yml** in the title field, and then add a description (optional). Next, click **Commit new file**.
 5.	Test the export and unpack workflow. Next, test that the workflow runs. Navigate to **Actions**, **Run workflow**, and choose **Run workflow**. If you have a different solution name than “VisitorManagement” then change the value here but leave the other values as is.
@@ -127,7 +127,7 @@ Create a workflow to generate a build artifact and import to production. Now we 
 
 1.	Navigate to **Actions** and select **New workflow**.
 2.	Chose **setup a workflow yourself**.
-3.	Rename the title of the workflow to ‘release-solution-to-prod’ and copy the content from the release-solution-to-prod.yml file and paste it into the **Edit new file** screen.
+3.	Rename the title of the workflow to ‘release-solution-to-prod’ and copy the content from the [release-solution-to-prod.yml](https://github.com/teamruegg/PowerPlatformALMGitHubActions/blob/main/workflows/release-solution-to-prod.yml) file and paste it into the **Edit new file** screen.
 4.	Update under solution_name: > default: **[SOLUTION]** with the Name of your solution.
 5.	Commit the changes. Choose **Start commit** and then add a title and description (optional). Next, select **Commit new file**.
 6.	Test the release to production workflow. You are now ready to test the last workflow. This workflow is triggered when a new release is deployed to production.
