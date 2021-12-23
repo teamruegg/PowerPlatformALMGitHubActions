@@ -106,6 +106,40 @@ Create a new secret to be used by GitHub Actions. We need to have the following 
 
 
 ## Step 5 - Create GitHub workflows using GitHub Actions for Microsoft Power Platform
+The workflows can automatically export your app (as an unmanaged solution) from a development environment, generate a build artifact (managed solution), and deploy the app into your production environment.
+Create a workflow to export and unpack the solution file to a new branch
+1.	Select **Actions** and then **set up a workflow yourself**. This will start a new YML file with a basic workflow to help you get started with GitHub Actions.
+2.	Delete the pre-created content, paste the content from the export-and-branch-solution.yml file, and then rename the file to ‘export-and-branch-solution’.yml.
+3.	Update under solution_name: > default: **[SOLUTION]** with the Name of your solution.
+4.	You are now ready to commit your changes. Select **Start commit**, type **export-and-branch-solution.yml** in the title field, and then add a description (optional). Next, click **Commit new file**.
+5.	Test the export and unpack workflow. Next, test that the workflow runs. Navigate to **Actions**, **Run workflow**, and choose **Run workflow**. If you have a different solution name than “VisitorManagement” then change the value here but leave the other values as is.
+6.	After 5–10 seconds the workflow will start, and you can select the running workflow to monitor progress.
+7.	After the workflow has completed, validate that a new branch has been created with the solution unpacked to the solutions/VisitorManagement folder. Select **Code** and then **Branches*3.
+8.	Select the branch that was created by the action.
+9.	Validate that the solutions/ VisitorManagement folder has been created in the new branch and then create a pull request to merge the changes into the main branch. Click **Pull request**.
+10.	In the **Open a pull request form**, add a title and description (optional), and then choose **Create pull request**.
+11.	You are then presented with the pull request summary. Confirm that the branch has no conflicts with the main branch and that the changes can be merged into the main branch automatically. Select **Squash and merge** and then **Confirm squash and merge**.
+12.	Navigate back to the main branch and validate the solution is now available there as well.
+
+Create a workflow to generate a build artifact and import to production. Now we will create an additional workflow that:
+•	Creates a managed solution and publishes it as a GitHub artifact
+•	Imports the build artifact into the production environment
+
+1.	Navigate to **Actions** and select **New workflow**.
+2.	Chose **setup a workflow yourself**.
+3.	Rename the title of the workflow to ‘release-solution-to-prod’ and copy the content from the release-solution-to-prod.yml file and paste it into the **Edit new file** screen.
+4.	Update under solution_name: > default: **[SOLUTION]** with the Name of your solution.
+5.	Commit the changes. Choose **Start commit** and then add a title and description (optional). Next, select **Commit new file**.
+6.	Test the release to production workflow. You are now ready to test the last workflow. This workflow is triggered when a new release is deployed to production.
+7.	Navigate to **Releases**.
+8.	Select **Draft a new release**.
+9.	Add a release tag, a title, and choose **Publish release**.
+10.	Select **Actions** to view the running workflow.
+11.	Choose the running workflow to view the actions as they run.
+12.	Wait for each action to complete.
+13.	After the workflow has completed, log into your production environment and validate that the solution has been deployed as a managed solution.
+
+![Image of Azure AD Application Configured Permissions](/images/PowerPlatformALMUsingGitHubActions_Step5_BuildSolutionResult.png)
 
 
 ## Step 6 - Add the GitHub Actions to the organization templates
