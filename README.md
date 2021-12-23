@@ -122,8 +122,8 @@ Create a workflow to export and unpack the solution file to a new branch
 12.	Navigate back to the main branch and validate the solution is now available there as well.
 
 Create a workflow to generate a build artifact and import to production. Now we will create an additional workflow that:
-•	Creates a managed solution and publishes it as a GitHub artifact
-•	Imports the build artifact into the production environment
+*	Creates a managed solution and publishes it as a GitHub artifact
+*	Imports the build artifact into the production environment
 
 1.	Navigate to **Actions** and select **New workflow**.
 2.	Chose **setup a workflow yourself**.
@@ -141,16 +141,9 @@ Create a workflow to generate a build artifact and import to production. Now we 
 
 ![Image of Azure AD Application Configured Permissions](/images/PowerPlatformALMUsingGitHubActions_Step5_BuildSolutionResult.png)
 
-
 ## Step 6 - Add the GitHub Actions to the organization templates
+Now you can make your GitHub Actions available as templates for the whole organisation. 
 
-
-
-
-This project contains a collection of GitHub Actions for Microsoft Power Platform development
-
-* Export a solution from a development environment.
-* Generate a build artifact (managed solution) and import into a production environment.
 
 ## Reference
 * [GitHub Actions for Microsoft Power Platform (GitHub)](https://github.com/microsoft/powerplatform-actions).
