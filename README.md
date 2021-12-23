@@ -28,12 +28,8 @@ All three environments should have equal configurations, except
 
 Environment | Development | Test | Production 
 ------------ | ------------- | ------------- | ------------- 
-Team huddle review work in progress | Update work in progress | Confirm current utilization and availability | Management reporting of work in progress and resourcing 
 Environment type | Staging, as you might want to be able to copy, backup or reset the environment | Staging, as you might want to be able to copy, backup or reset the environment | Production
-Environment URL | Use dev as a postfix of the production environment name. For example:
-[production_name]dev.crm[region].dynamics.com | Use test as a postfix of the production environment name. For example:
-[production_name]test.crm[region].dynamics.com | No postfix. Only production environment name. For example:
-[production_name].crm[region].dynamics.com
+Environment URL | Use dev as a postfix of the production environment name. For example: [production_name]dev.crm[region].dynamics.com | Use test as a postfix of the production environment name. For example: [production_name]test.crm[region].dynamics.com | No postfix. Only production environment name. For example: [production_name].crm[region].dynamics.com
 Security group | Assign the Security Group where your developers are member of. For example, <App Name>_Developers | Assign the Security Group where your developers are member of. For example, <App Name>_Testers | Assign the Security Group where your production users are member of. For example, <App Name>_Users
 Updates | Release wave Off, as you want to control what apps/resources are deployed. | Release wave Off, as you want to control what apps/resources are deployed. | Release wave Off, as you want to control what apps/resources are deployed.
 
