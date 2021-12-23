@@ -88,19 +88,19 @@ In order for the GitHub workflow to deploy solutions as part of a CI/CD pipeline
 Now that you have created and configured the service principal for all environments and are ready to develop your solution within the development environment. I skip this step as we have our Visitor Management solution and proceed directly to the next step configuring your GitHub Workflows within your GitHub Repository.
 
 ## Step 4 - Create a new GitHub repository
-Create your new repository and name it “Your application name”. Make sure you select Add a README file to initiate the repo and choose Create repository. In our case we created “VisitorManagement” repository.
+Create your new repository and name it **“Your application name”**. Make sure you select **Add a README file** to initiate the repo and choose **Create repository**. In our case we created **“VisitorManagement”** repository.
 Create a new secret to be used by GitHub Actions. We need to have the following secrets to be referenced within our GitHub Actions workflows:
-* Password, for the username you are using to connect to Microsoft Power Platform
-* PowerPlatformSPN, for the Service Principal Authentication
-* ClientID, for the Application (client) ID reference
-* TentantID, for the Directory (tenant) ID reference
-* DevEnvironmentUrl, for the development environment link reference
-* BuildEnvironmentUrl, for the build and test environment link reference
-* ProdEnvironmentUrl, for the production environment link reference
+* **Password**, for the username you are using to connect to Microsoft Power Platform
+* **PowerPlatformSPN**, for the Service Principal Authentication
+* **ClientID**, for the Application (client) ID reference
+* **TentantID**, for the Directory (tenant) ID reference
+* **DevEnvironmentUrl**, for the development environment link reference
+* **BuildEnvironmentUrl**, for the build and test environment link reference
+* **ProdEnvironmentUrl**, for the production environment link reference
 
-1.	Navigate to the repo from the link in the import wizard and select Settings, navigate to Secrets, and then click New secret.
-2.	On the secrets page, name the secret ‘password’. Type the password for the username you are using to connect to Microsoft Power Platform into the Value field and select Add secret. The password will be referenced in the YML files used to define the GitHub workflows later.
-3.	Repeat Step 1 – 2 for all other secrets, PowerPlatformSPN, ClientID, TenantID, DevEnvironmentUrl, BuildEnvironmentUrl and ProdEnvironmentUrl. 
+1.	Navigate to the repo from the link in the import wizard and select **Settings**, navigate to **Secrets**, and then click **New secret**.
+2.	On the secrets page, name the secret ‘password’. Type the password for the username you are using to connect to Microsoft Power Platform into the **Value** field and select Add **secret**. The password will be referenced in the YML files used to define the GitHub workflows later.
+3.	Repeat Step 1 – 2 for all other secrets, **PowerPlatformSPN**, **ClientID**, **TenantID**, **DevEnvironmentUrl**, **BuildEnvironmentUrl** and **ProdEnvironmentUrl**. 
 
 ![Image of Azure AD Application Configured Permissions](/images/PowerPlatformALMUsingGitHubActions_Step4_GitHubCreateNewSecrets.png)
 
